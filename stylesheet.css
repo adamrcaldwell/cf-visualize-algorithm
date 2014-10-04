@@ -1,0 +1,27 @@
+h1 {
+	font-family: Garamond;
+	font-weight: bold;
+}
+
+ul {
+	font-family: Garamond;
+	text-align: center;
+	width: 30em;
+}
+
+li {
+	font-family: Garamond;
+	display: inline-block;
+	width: 5em;
+	border:1px solid black;
+}
+
+.swapping {
+  background-color: black;
+  color: white;
+}
+
+.sorted {
+	background-color: grey;
+	color:black;
+}
