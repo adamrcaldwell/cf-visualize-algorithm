@@ -4,12 +4,17 @@ $(document).ready(function() {
   	randomize($(".num").length - 1);
 	});
 	$('#bubblebutton').on('click', function() {
-		bubbleSort();
+		timerID = setInterval(bubbleSort, 25);
+	});
+	$('#stopbutton').on('click', function() {
+		clearInterval(timerID);
 	});
 });
 
+var timerID;
+
 function fillSet () {
-	for(i = 1; i <= 10; i++) {
+	for(i = 1; i <= 100; i++) {
 		var number = new Number(i);
 		$("#numberset").append(number.toHTML);
 	}
@@ -60,7 +65,7 @@ function bubbleSort() {
 	for (i = 0; i < $len; i++) {
 		for(j = 0, stop = $len - i; j < stop; j++) {
 			if(liToVal(j) > liToVal(j + 1)) {
-				swap(j, j + 1).fadeIn(200);
+				swap(j, j + 1).delay(200);
 			}
 		}
 	}
